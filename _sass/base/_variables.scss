@@ -1,0 +1,29 @@
+// Guttenberg stuff
+
+// Theme / Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic");
+$font-body: Open Sans, Arial, Helvetica, Sans-serif;
+$font-headings: Merriweather, Georgia, serif;
+
+// Paragraph indenting
+$paragraph-indent: false; // [ true / false ]
+
+// Colors
+$color-font-body: #222 !default;
+$color-font-headings: $color-font-body !default;
+$color-font-light: #888 !default;
+$color-font-figcaption: $color-font-body !default;
+
+$color-link-normal: $color-font-body;
+$color-link-hover: $color-font-body;
+$color-link-active: #f00;
+$color-link-visited: $color-font-light;
+
+$color-selection: $color-font-light;
+$color-selection-background: $color-font-body;
+
+$hr-color: $color-font-body;
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-height: 1; // [ 2 ] — In pixels, only for line style

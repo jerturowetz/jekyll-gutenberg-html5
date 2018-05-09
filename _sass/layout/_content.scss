@@ -1,0 +1,17 @@
+.main-content {}
+
+.main-content__top {
+
+  @extend .typography;
+
+  max-width: 56em;
+  margin: 0 auto;
+}
+
+.main-content__sections {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}

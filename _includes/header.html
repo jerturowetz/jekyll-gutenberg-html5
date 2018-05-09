@@ -1,0 +1,13 @@
+<div class="main-header__logo">
+  <a class="main-header__logo__link" href="{{ site.url }}" alt="{{ site.title }}"><img class="main-header__logo__image" src="{{ 'img/site-logo.png' | absolute_url }}"></a>
+</div>
+<nav class="main-header__menu">
+  <ul class="main-menu">
+    {% for page in site.pages %}
+      {% if page.layout == 'default' %}
+        <li class="main-menu__item"><a class="main-menu__link" href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+<div class="main-header__spacer"></div>

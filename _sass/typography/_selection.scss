@@ -1,0 +1,5 @@
+.typography ::selection,
+.typography ::-moz-selection {
+  color: $color-selection;
+  background: $color-selection-background;
+}

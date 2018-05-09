@@ -1,0 +1,17 @@
+<div class="section-full-width"
+  {% if section.image %}style="
+    background-image: url('{{ section.image | prepend: "img/" | absolute_url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;"
+  {% endif %} >
+  <div class="section-full-width__spacer"></div>
+  <div class="section-full-width__content">
+    <div class="typography">
+      {% if section.title %}<h2 class="section-full-width__title">{{ section.title }}</h2>{% endif %}
+      {% if section.content %}
+        {{ section.content | markdownify }}
+      {% endif %}
+    </div>
+  </div>
+</div>

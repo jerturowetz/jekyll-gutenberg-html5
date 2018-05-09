@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+  {% include head.html %}
+
+	<body>
+
+		<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="main-header">
+      {% include header.html %}
+    </header>
+
+    <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
+
+    <main class="main-content">
+      {% assign sections = page.sections %}
+      {% include content.html sections=sections %}
+    </main>
+
+    <!-- <aside class="secondary-sidebar">Sidebar (right)</aside> -->
+
+    <footer class="main-footer">
+      {% include footer.html %}
+    </footer>
+
+    <script src="{{ 'js/vendor/modernizr-3.6.0.min.js' | absolute_url }}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="{{ 'js/vendor/jquery-3.3.1.min.js' | absolute_url }}"><\/script>')</script>
+    <script src="{{ 'js/plugins.js' | absolute_url }}"></script>
+    <script src="{{ 'js/main.js' | absolute_url }}"></script>
+
+    {% if site.analytics-code %}
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', '{{site.analytics-code}}', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    {% endif %}
+
+	</body>
+
+</html>

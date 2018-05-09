@@ -1,0 +1,25 @@
+// Float defaults
+.typography .floatLeft {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    float: left;
+  }
+
+}
+
+.typography .floatCenter {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.typography .floatRight {
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    float: right;
+  }
+
+}
