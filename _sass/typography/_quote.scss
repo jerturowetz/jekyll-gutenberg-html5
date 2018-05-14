@@ -1,4 +1,4 @@
-.typography blockquote {
+blockquote {
   font-style: italic;
   padding-left: 1.4375rem;
 
@@ -8,13 +8,13 @@
 
 }
 
-.typography cite {
+cite {
   display: block;
   font-style: normal;
 }
 
 // Quotes
-.typography figure blockquote {
+figure blockquote {
   @include padding(1, 0);
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {

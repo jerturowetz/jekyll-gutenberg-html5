@@ -25,66 +25,62 @@ html {
 
 }
 
-.typography {
+// Only adjust things I have follow up rules for
 
-  // Only adjust things I have follow up rules for
+table,
+td,
+th,
+ul,
+ol,
+dl,
+dt,
+li,
+p,
+blockquote,
+figure {
+  @include line-height(1);
+  @include margin(0, 0, 1);
 
-  table,
-  td,
-  th,
-  ul,
-  ol,
-  dl,
-  dt,
-  li,
-  p,
-  blockquote,
-  figure {
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/line-height';
+    @import '../mixins/margin';
+
     @include line-height(1);
-    @include margin(0, 0, 1);
-
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      $leading: $leading-desktop;
-      $leading-rem: $leading-rem-desktop;
-
-      @import '../mixins/line-height';
-      @import '../mixins/margin';
-
-      @include line-height(1);
-      @include margin-bottom(1);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
+    @include margin-bottom(1);
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  // Clear margin for line breaks
-  br {
-    margin-bottom: 0;
-  }
+}
 
-  // Prevent `em` and `i` affecting `line-height` in all browsers.
-  em,
-  i {
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
+// Clear margin for line breaks
+br {
+  margin-bottom: 0;
+}
 
-  small {
+// Prevent `em` and `i` affecting `line-height` in all browsers.
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+small {
+  @include line-height(.5);
+
+  font-size: 70%;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/line-height';
+
     @include line-height(.5);
-
-    font-size: 70%;
-
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      $leading: $leading-desktop;
-      $leading-rem: $leading-rem-desktop;
-
-      @import '../mixins/line-height';
-
-      @include line-height(.5);
-    }
-
   }
 
 }

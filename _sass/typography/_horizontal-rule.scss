@@ -1,5 +1,5 @@
 // Horizontal rule
-.typography hr {
+hr {
   @include margin-top($hr-margin);
   @include margin-bottom($hr-margin);
 

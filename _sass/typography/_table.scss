@@ -1,10 +1,10 @@
 // Remove most spacing between table cells.
-.typography table {
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.typography td,
-.typography th {
+td,
+th {
   padding: 0;
 }

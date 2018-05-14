@@ -1,10 +1,7 @@
 .main-content {}
 
 .main-content__top {
-
-  @extend .typography;
-
-  max-width: 56em;
+  max-width: $content-max-width;
   margin: 0 auto;
 }
 

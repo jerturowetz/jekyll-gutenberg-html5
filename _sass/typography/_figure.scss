@@ -1,4 +1,4 @@
-.typography figcaption {
+figcaption {
   @include line-height(1);
   color: $color-font-figcaption;
   display: block;
@@ -19,12 +19,12 @@
 
 }
 
-.typography figure {
+figure {
   display: block;
 }
 
-.typography figure.floatLeft,
-.typography figure.floatRight {
+figure.floatLeft,
+figure.floatRight {
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     $leading: $leading-desktop;
