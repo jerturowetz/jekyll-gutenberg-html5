@@ -1,6 +1,6 @@
 <div class="section-half-dark">
-  <div class="typography">
-    {% if section.title %}<h3 class="section-half-dark__title">{{ section.title }}</h3>{% endif %}
+  <div class="section-half-dark__content">
+    {% if section.title %}<h3 class="section-half-dark__content__title">{{ section.title }}</h3>{% endif %}
     {% if section.content %}
       {{ section.content | markdownify }}
     {% endif %}

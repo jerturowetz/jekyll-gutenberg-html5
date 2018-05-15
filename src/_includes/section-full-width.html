@@ -6,12 +6,10 @@
     background-position: center center;"
   {% endif %} >
   <div class="section-full-width__spacer"></div>
+  {% if section.content %}
   <div class="section-full-width__content">
-    <div class="typography">
-      {% if section.title %}<h2 class="section-full-width__title">{{ section.title }}</h2>{% endif %}
-      {% if section.content %}
-        {{ section.content | markdownify }}
-      {% endif %}
-    </div>
+      {% if section.title %}<h2 class="section-full-width__content__title">{{ section.title }}</h2>{% endif %}
+      {{ section.content | markdownify }}
   </div>
+  {% endif %}
 </div>
