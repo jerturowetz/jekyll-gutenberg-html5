@@ -1,3 +1,10 @@
-<div class="section-half-image">
-    <img class="section-half-image__image" src="{{ section.image | prepend: 'img/' | absolute_url }}">
+<div class="section-half-image" style="
+    background-image: url('{{ section.image | prepend: "img/" | absolute_url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;">
+    <div class="section-half-image__content">
+        <!-- content here I gess -->
+    </div>
 </div>
