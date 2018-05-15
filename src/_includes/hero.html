@@ -1,0 +1,13 @@
+<div class="hero" style="
+  background-image: url('/assets/images/{{ hero.image }}');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;">
+  <h1 class="hero__title">{{ hero.title }}</h1>
+  {% if hero.description %}
+      {% assign paragraphs = hero.description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p class="hero__content">{{ paragraph }}</p>{% endfor %}
+  {% endif %}
+  <p class="hero__cta"><a href="{{ hero.url }}">View work</a></p>
+</div>
