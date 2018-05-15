@@ -10,34 +10,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-// embed,
-// iframe,
-// img,
-// object,
-// video {
-//   display: block;
-//   max-width: 100%;
-// }
-
-// table {
-//   width: 100%;
-//   table-layout: fixed;
-// }
-
-// figure {
-//   max-width: -webkit-max-content;
-//   max-width: -moz-max-content;
-//   max-width: max-content;
-//   margin-right: 0;
-//   margin-bottom: 0;
-//   margin-left: 0;
-// }
-
-// figure > img {
-//   display: block;
-//   height: auto;
-// }
-
-// noscript {
-//   display: block;
-// }
+embed,
+iframe,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
