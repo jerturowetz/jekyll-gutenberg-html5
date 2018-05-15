@@ -9,6 +9,8 @@ description:
 analytics-code: UA-XXXXX-Y
 
 # Build settings
+destination: public
+source: src
 markdown: kramdown
 plugins:
   - jekyll-feed
