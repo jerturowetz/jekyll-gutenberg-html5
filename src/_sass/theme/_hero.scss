@@ -1,0 +1,34 @@
+.hero {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 43vh;
+
+  @media (max-width:$small-devices) {
+      min-height: 96vh;
+  }
+
+  &__title {
+      color: white;
+      text-transform: uppercase;
+      margin-top: 0;
+  }
+
+  &__content {
+      text-align: left;
+      max-width: #{ $max-width * 1.5 + 'rem'};
+      color: white;
+  }
+
+  &__cta {
+      font-family: $font-headings;
+      font-weight: 700;
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+  }
+
+}

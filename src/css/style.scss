@@ -14,9 +14,6 @@
 @import "mixins/margin";
 @import "mixins/padding";
 
-// Gutenberg core
-@import "typography/gutenberg-config";
-
 // Variables
 @import "base/variables";
 
@@ -37,4 +34,9 @@
 @import "layout/content";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/sections";
+
+// Theme
+@import "theme/general";
+@import "theme/main-menu";
+@import "theme/hero";
+@import "theme/sections";
