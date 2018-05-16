@@ -1,16 +1,15 @@
-
-  {% unless page.content == "" or page.content == nil %}
+{% unless page.content == "" or page.content == nil %}
     <div class="main-content__top">
-      {{page.content}}
+        {{page.content}}
     </div>
-  {% endunless %}
+{% endunless %}
 
-  <div class="main-content__sections">
+<div class="main-content__sections">
     {% for section in sections %}
-      {% if section.class %}
-        {% include section-{{section.class}}.html section=section %}
-      {% else %}
-        {% include section-default.html section=section %}
-      {% endif %}
+        {% if section.class %}
+            {% include section-{{section.class}}.html section=section %}
+        {% else %}
+            {% include section-default.html section=section %}
+        {% endif %}
     {% endfor %}
-  </div>
+</div>

@@ -6,33 +6,33 @@
 <html class="no-js" lang="{{ page.lang }}">
 <!--<![endif]-->
 
-  {% include head.html %}
+    {% include head.html %}
 
-	<body>
+    <body>
 
-		<!--[if lt IE 8]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <header class="main-header">
-      {% include header.html %}
-    </header>
+        <header class="main-header">
+            {% include header.html %}
+        </header>
 
-    <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
+        <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
 
-    <div class="main-content">
-      {% assign sections = page.sections %}
-      {% include content.html sections=sections %}
-    </div>
+        <div class="main-content">
+            {% assign sections = page.sections %}
+            {% include content.html sections=sections %}
+        </div>
 
-    <!-- <aside class="secondary-sidebar">Sidebar (right)</aside> -->
+        <!-- <aside class="secondary-sidebar">Sidebar (right)</aside> -->
 
-    <footer class="main-footer">
-      {% include footer.html %}
-    </footer>
+        <footer class="main-footer">
+            {% include footer.html %}
+        </footer>
 
-      {% include scripts.html %}
+        {% include scripts.html %}
 
-	</body>
+    </body>
 
 </html>
