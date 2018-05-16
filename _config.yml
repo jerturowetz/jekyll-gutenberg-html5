@@ -6,6 +6,8 @@
 # Site settings
 title: Jer's Jekyll Template
 description:
+# url: "https://www.mysite.com"
+permalink: pretty
 analytics-code: UA-XXXXX-Y
 
 # Build settings
