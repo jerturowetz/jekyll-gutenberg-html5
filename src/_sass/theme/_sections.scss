@@ -95,19 +95,21 @@
 
 .section-half-image {
     width: 100%;
+    padding-bottom: 56%;
     flex: 1 1 auto;
     align-self: stretch;
 
     @media (min-width: $small-devices) {
         width: 50%;
+        padding-bottom: 28%
     }
 
     &__content {
-        padding: 2rem;
+      padding: 0;
 
-        @media ( min-width: $small-devices ) {
-            padding: 4rem;
-        }
+      @media ( min-width: $small-devices ) {
+          padding: 0;
+      }
 
     }
 
