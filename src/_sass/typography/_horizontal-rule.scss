@@ -1,43 +1,43 @@
 // Horizontal rule
 hr {
-  @include margin-top($hr-margin);
-  @include margin-bottom($hr-margin);
-
-  box-sizing: content-box;
-  border: 0;
-  color: $hr-color;
-  display: block;
-  height: #{$leading + 'px'};
-  height: #{$leading-rem + 'rem'};
-  margin-right: auto;
-  margin-left: auto;
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    @import '../mixins/margin';
-
     @include margin-top($hr-margin);
     @include margin-bottom($hr-margin);
+
+    box-sizing: content-box;
+    border: 0;
+    color: $hr-color;
+    display: block;
     height: #{$leading + 'px'};
     height: #{$leading-rem + 'rem'};
-  }
+    margin-right: auto;
+    margin-left: auto;
 
-  background-size: 100% #{$leading + 'px'};
-  background-size: 100% #{$leading-rem + 'rem'};
-  background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
-  width: 100%;
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-    $hr-margin: $hr-margin-desktop;
+        @import '../mixins/margin';
+
+        @include margin-top($hr-margin);
+        @include margin-bottom($hr-margin);
+        height: #{$leading + 'px'};
+        height: #{$leading-rem + 'rem'};
+    }
 
     background-size: 100% #{$leading + 'px'};
     background-size: 100% #{$leading-rem + 'rem'};
-    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    width: 100%;
 
-  }
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
+        $hr-margin: $hr-margin-desktop;
+
+        background-size: 100% #{$leading + 'px'};
+        background-size: 100% #{$leading-rem + 'rem'};
+        background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+
+    }
 
 }

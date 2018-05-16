@@ -1,58 +1,58 @@
 .main-header {
-  margin: 0;
-  background-color: #000;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .main-logo {
-  flex: 1;
+    flex: 1;
 
-  &__link {
-    display: inline-block;
-  }
+    &__link {
+        display: inline-block;
+    }
 
-  &__image {
-    display: block;
-    height: 2em;
-    margin: 1em;
-  }
+    &__image {
+        display: block;
+        height: 2em;
+        margin: 1em;
+    }
 
 }
 
 .main-menu {
-  flex: 2;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    flex: 2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 
-  &__item {
-    display: inline-block;
-    font-family: $font-headings;
-    font-size: 0.8em;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 0 1em 0 0;
+    &__item {
+        display: inline-block;
+        font-family: $font-headings;
+        font-size: 0.8em;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0 1em 0 0;
 
-    &:last-of-type {
-        margin-right: 0;
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &--current {
+            font-weight: 700;
+        }
+
     }
 
-    &--current {
-        font-weight: 700;
+    &__link {
+        display: block;
     }
-
-  }
-
-  &__link {
-    display: block;
-  }
 
 }
 
 .top-spacer {
-  flex: 1;
+    flex: 1;
 }

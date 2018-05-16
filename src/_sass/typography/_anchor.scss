@@ -2,28 +2,29 @@
    ========================================================================== */
 
 a {
-  background: transparent;
-  color: $color-link-normal;
-  transition: all .3s;
+    background: transparent;
+    color: $color-link-normal;
+    transition: all .3s;
 
-  &:active,
-  &:hover {
-    outline: 0;
-  }
-
-  &:hover {
-    color: $color-link-hover;
-  }
-
-  &:visited {
-    color: $color-link-visited;
+    &:active,
+    &:hover {
+        outline: 0;
+    }
 
     &:hover {
-      color: $color-link-hover;
+        color: $color-link-hover;
     }
-  }
 
-  &:active {
-    color: $color-link-active;
-  }
+    &:visited {
+        color: $color-link-visited;
+
+        &:hover {
+            color: $color-link-hover;
+        }
+    }
+
+    &:active {
+        color: $color-link-active;
+    }
+
 }
