@@ -1,15 +1,16 @@
 .hero {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
-    min-height: 43vh;
+    min-height: 95vh;
 
-    @media (max-width:$small-devices) {
-        min-height: 96vh;
-    }
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;
+  
     &__title {
         color: white;
         text-transform: uppercase;

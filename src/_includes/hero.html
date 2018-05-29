@@ -1,9 +1,4 @@
-<div class="hero" style="
-    background-image: url('/assets/images/{{ hero.image }}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: black;">
+<div class="hero" style="background-image: url('{{ hero.image | prepend: 'img/' | absolute_url }}');">
     <h1 class="hero__title">{{ hero.title }}</h1>
     {% if hero.content %}
         {{ hero.content | markdownify }}
