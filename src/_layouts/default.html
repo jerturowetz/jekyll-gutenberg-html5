@@ -16,6 +16,12 @@
 
         <header class="main-header">
             {% include header.html %}
+
+            {% if page.hero %}
+                {% assign hero = page.hero %}
+                {% include hero.html hero=hero %}
+            {% endif %}
+
         </header>
 
         <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
