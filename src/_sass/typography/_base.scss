@@ -13,6 +13,7 @@ html {
     box-sizing: border-box;
     font-size: #{$base + 'px'};
     font-size: #{$base-font-size + '%'};
+    font-weight: $base-font-weight;
     font-family: $font-body;
     color: $color-font-body;
     -ms-text-size-adjust: 100%;

@@ -1,35 +1,40 @@
 .hero {
+    width: 100%;
+    min-height: 95vh;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    min-height: 95vh;
 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: black;
-  
-    &__title {
-        color: white;
-        text-transform: uppercase;
-        margin-top: 0;
-    }
 
-    p {
-        text-align: left;
+    &__content-wrap {
+
         max-width: #{ $max-width * 1.5 + 'rem'};
-        color: white;
-    }
+        margin: 0 auto;
 
-    &__cta {
-        font-family: $font-headings;
-        font-weight: 700;
-        display: block;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0.05em;
+        .hero__title {
+            color: white;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        p {
+            color: white;
+        }
+
+        .hero__cta {
+            font-family: $font-headings;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
     }
 
 }

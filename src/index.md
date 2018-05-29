@@ -4,6 +4,14 @@ image: og-image.jpg
 title: SomePage
 description: SomePage Description
 
+hero:
+  title: Hero title
+  image: og-image.jpg
+  content: |
+    Here is some hero content
+
+    With a line break just to show you how we do
+
 sections:
 
   - class: default
