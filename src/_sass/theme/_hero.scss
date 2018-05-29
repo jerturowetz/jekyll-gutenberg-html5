@@ -13,28 +13,28 @@
     background-position: center center;
     background-color: black;
 
-    &__content-wrap {
+    &__wrap {
 
         max-width: #{ $max-width * 1.5 + 'rem'};
         margin: 0 auto;
 
-        .hero__title {
-            color: white;
-            text-transform: uppercase;
-            margin-top: 0;
-        }
+    }
 
-        p {
-            color: white;
-        }
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        margin-top: 0;
+    }
 
-        .hero__cta {
-            font-family: $font-headings;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.05em;
-        }
+    p {
+        color: white;
+    }
 
+    &__cta {
+        font-family: $font-headings;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.05em;
     }
 
 }

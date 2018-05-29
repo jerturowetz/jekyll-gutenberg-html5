@@ -2,15 +2,14 @@
 layout: default
 image: og-image.jpg
 title: SomePage
-description: SomePage Description
-
-hero:
-  title: Hero title
-  image: og-image.jpg
-  content: |
+description:  |
     Here is some hero content
 
     With a line break just to show you how we do
+
+cta:
+  content: View work
+  url: https://www.google.com
 
 sections:
 
