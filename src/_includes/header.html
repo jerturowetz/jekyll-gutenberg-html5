@@ -1,6 +1,6 @@
 <div class="main-logo">
     <a class="main-logo__link" href="{{ site.url }}" alt="{{ site.title }}">
-        <img class="main-logo__image" src="{{ 'img/site-logo.png' | absolute_url }}">
+        <img class="main-logo__image" src="{{ site.logo | prepend: 'img/' | absolute_url }}">
     </a>
 </div>
 <ul class="main-menu">

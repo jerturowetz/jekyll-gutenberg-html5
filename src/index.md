@@ -1,6 +1,6 @@
 ---
 layout: default
-image: social-image.jpg
+image: og-image.jpg
 title: SomePage
 description: SomePage Description
 
