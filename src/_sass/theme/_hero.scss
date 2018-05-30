@@ -14,10 +14,8 @@
     background-color: black;
 
     &__wrap {
-
         max-width: #{ $max-width * 1.5 + 'rem'};
         margin: 0 auto;
-
     }
 
     &__title {
