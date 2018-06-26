@@ -2,22 +2,25 @@
 
 This project is a frankenstein of the [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate), adapted for [jekyll](https://jekyllrb.com/) by JerTurowetz.
 
-The server config stuff (who uses apache?), build, test and deploy tools have been removed and a heavily modified, shaved down version of Matej Latin's [Gutenberg](https://github.com/matejlatin/Gutenberg) typography kit has been added.
+The HTML5 boilerplate server config, build, test and deploy tools have been removed.
+
+A heavily modified, shaved down version of Matej Latin's [Gutenberg](https://github.com/matejlatin/Gutenberg) typography kit has been added and should be easy enough to implement or dump if you dont want to use it.
 
 ## Features
 
-`/vscode/settings.json` ready to go
-`.editorconfig` defaults for winners
+- `/vscode/settings.json` ready to go
+- `.editorconfig` defaults for winners
 
 ## Requirements
 
-- jekyll
-- jekyll-feed
+You'll need ruby, sass, jekyll and a few gems to make your life easy. Assuming you have ruby installed:
+
+  `gem install sass --no-user-install`
+  `gem install jekyll bundler jekyll-paginate-v2 jekyll-feed jekyll-gist rouge wdm`
 
 ## Getting started
 
 - Download or clone this repo
-- Erase the `.git` folder
 - if you need deps run `bundle install`
 - hack it up!
 - Build with `jekyll build` or serve with `jekyll serve --watch`
@@ -39,5 +42,6 @@ The rest is just basic layout stuff that you can hack up however you want. I usu
 
 ## To do
 
-- Exclude CSS & JS from jekyll and manage with gulp instead
-- compress & resize images with gulp
+- Exclude CSS & JS from jekyll and manage with gulp or webpack instead
+- compress & resize images with whatever used above
+- Add basic htaccess/nginx header rules for simple setups
