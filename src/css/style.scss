@@ -3,19 +3,18 @@
 # only Main files contain this front matter, not partials.
 ---
 
-// HTML5 Boilerplate base files
-@import "base/normalize";
-@import "base/main";
-@import "base/extras";
-
 // Gutenberg - mixins
 @import "mixins/font-size";
 @import "mixins/line-height";
 @import "mixins/margin";
 @import "mixins/padding";
 
-// Variables
+// Base
+@import "base/normalize"; // from HTML5 boilerplate
+@import "base/main"; // from HTML5 boilerplate
+@import "base/extras"; // from HTML5 boilerplate
 @import "base/variables";
+@import "base/layout";
 
 // Gutenberg select modules
 @import "typography/base";
@@ -28,9 +27,6 @@
 @import "typography/quote";
 @import "typography/selection";
 @import "typography/table";
-
-// Layout
-@import "base/layout";
 
 // Theme
 @import "theme/main-menu";
