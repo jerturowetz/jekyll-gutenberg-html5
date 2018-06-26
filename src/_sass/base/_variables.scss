@@ -2,8 +2,14 @@
 
 // Theme / Fonts
 $font-body: 'Open Sans', 'Helvetica', sans-serif;
+$base-font-weight: 600;
+
 $font-headings: 'Montserrat', 'Helvetica Neue', sans-serif;
+$heading-font-weight: normal;
+
 $font-menu: $font-headings;
+$menu-font-weight: normal;
+$menu-font-weight--current: normal;
 
 // Paragraph indenting
 $paragraph-indent: false; // [ true / false ]

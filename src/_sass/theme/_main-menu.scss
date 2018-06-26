@@ -33,7 +33,7 @@
         display: inline-block;
         font: #{$menu-item-font-size/1} $font-menu;
         padding: $menu-item-padding;
-        font-weight: 400;
+        font-weight: $menu-font-weight;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin: 0 1em 0 0;
@@ -43,7 +43,7 @@
         }
 
         &--current {
-            font-weight: 700;
+            font-weight: $menu-font-weight--current;
         }
 
     }
