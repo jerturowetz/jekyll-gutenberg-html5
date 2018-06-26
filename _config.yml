@@ -11,6 +11,7 @@ logo: site-logo.png # place in /img
 social-image: og-image.jpg # place in /img
 # url: "https://www.mysite.com"
 # analytics-code: UA-XXXXX-Y
+# maps-api: ########
 
 # Favicon settings - use realfavicon generator
 icon-color: '#e08524'
