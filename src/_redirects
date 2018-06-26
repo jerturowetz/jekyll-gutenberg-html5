@@ -1,2 +1,4 @@
 # Redirect default Netlify subdomain to primary domain
 # https://installname.netlify.com/* https://www.somesite.com/:splat 301!
+# /  /en/  302  Language=en
+# /  /fr/  302
