@@ -11,3 +11,7 @@
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 {% endif %}
+
+{% if site.maps-api %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps-api }}&callback=initMap" async defer></script>
+{% endif %}
