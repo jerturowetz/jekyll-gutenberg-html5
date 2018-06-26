@@ -28,6 +28,10 @@ plugins:
 sass:
   style: compressed # possible values: nested expanded compact compressed
 
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
 # Exclude from processing.
 #
 # Don't forget that Jekyll automatically
