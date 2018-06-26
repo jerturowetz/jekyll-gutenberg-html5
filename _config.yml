@@ -7,8 +7,8 @@
 title: Jekyll Gutenberg HTML5
 description:
 version: 0.0.01
-logo: site-logo.png # place in /img
-social-image: og-image.jpg # place in /img
+logo: site-logo.png # place in src/img/
+social-image: og-image.jpg # place in src/img/
 # url: "https://www.mysite.com"
 # analytics-code: UA-XXXXX-Y
 # maps-api: ########
