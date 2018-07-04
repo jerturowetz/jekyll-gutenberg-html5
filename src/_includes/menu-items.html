@@ -1,0 +1,7 @@
+{% for page in site.pages %}
+{% if page.layout == 'default' and page.title != 'BKDSN' %}
+    <li class="menu__item">
+        <a class="menu__item__link" href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+    </li>
+{% endif %}
+{% endfor %}

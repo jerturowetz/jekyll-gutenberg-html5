@@ -1,15 +1,23 @@
-<div class="main-logo">
-    <a class="main-logo__link" href="{{ site.url }}" alt="{{ site.title }}">
-        <img class="main-logo__image" src="{{ site.logo | prepend: 'img/' | absolute_url }}">
-    </a>
-</div>
-<ul class="main-menu">
-    {% for page in site.pages %}
-        {% if page.layout == 'default' %}
-            <li class="main-menu__item">
-                <a class="main-menu__link" href="{{ page.url | absolute_url }}">{{ page.title }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
-<div class="top-spacer"></div>
+<nav class="topbar">
+
+    <div class="topbar__wrap">
+
+        <div class="topbar__logo">
+            {% include logo.html %}
+        </div>
+
+        <div class="topbar__dropdown-toggle" onclick="menuToggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <ul class="menu dropdown-menu">
+            {% include menu-items.html %}
+        </ul>
+
+        <div class="topbar__spacer">&nbsp;</div>
+
+    </div>
+
+</nav>
