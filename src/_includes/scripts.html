@@ -1,6 +1,7 @@
-<script src="{{ 'js/vendor/modernizr-3.6.0.min.js' | absolute_url }}"></script>
+<script src="{{ 'modernizr-3.6.0.min.js' | prepend: 'js/vendor/' | absolute_url }}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="{{ 'js/vendor/jquery-3.3.1.min.js' | absolute_url }}"><\/script>')</script>
+<script src="{{ 'mobile-chrome-vh-fix.js' | prepend: 'js/vendor/' | absolute_url }}"></script>
 <script src="{{ 'js/plugins.js' | absolute_url }}"></script>
 <script src="{{ 'js/main.js' | absolute_url }}"></script>
 
