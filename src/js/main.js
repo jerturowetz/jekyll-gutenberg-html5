@@ -1,17 +1,20 @@
-// // Example code for employing the chrome mobile vh units fix
-// var vhFixOptions = [
-//   {
-//     selector: '.Bears', // Mandatory, CSS selector
-//     vh: 150,  // Mandatory, height in vh units
-//   },
-//   {
-//     selector: '.Foxes',
-//     vh: 50
-//   },
-//   {
-//     selector: '.Horses',
-//     vh: 100
-//   }
-// ];
+function menuToggle(x) {
 
-// var vhFix = new VHChromeFix( vhFixOptions );
+    var y = document.getElementsByClassName( 'dropdown-menu' );
+    var dropdownMenu = y[0];
+
+    x.classList.toggle( 'dropdown-open' );
+    dropdownMenu.classList.toggle( 'dropdown-open' );
+
+}
+
+
+var vhFixOptions = [
+    {
+        selector: '.section--hero',
+        vh: 94,
+
+    }
+];
+
+var vhFix = new VHChromeFix( vhFixOptions );
