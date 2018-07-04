@@ -1,10 +1,4 @@
-{% unless page.content == "" or page.content == nil %}
-    <div class="main-content__top">
-        {{page.content}}
-    </div>
-{% endunless %}
-
-<div class="main-content__sections">
+<div class="sections">
     {% for section in sections %}
         {% if section.class %}
             {% include section-{{section.class}}.html section=section %}
