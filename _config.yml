@@ -25,6 +25,7 @@ source: src
 markdown: kramdown
 plugins:
   - jekyll-feed
+
 sass:
   style: compressed # possible values: nested expanded compact compressed
 
