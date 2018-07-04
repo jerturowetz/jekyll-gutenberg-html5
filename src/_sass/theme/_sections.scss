@@ -82,50 +82,12 @@
 
     }
 
-    &--link-box {
-        padding-bottom: 56%;
-
-        @media (min-width: $small-devices) {
-            padding-bottom: 28%;
-        }
-    }
-
     &--dark {
         background-color: #000;
 
         .section__title {
             color: #fff;
 
-        }
-
-    }
-
-    &--full-width {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: stretch;
-
-        .section__spacer {
-            flex: 1 1 0;
-            width: 50%;
-
-            @media (max-width: $small-devices) {
-                display: none;
-            }
-
-        }
-
-        .section__content {
-            @extend %lead;
-            color: white;
-            flex: 1 1 0;
-            width: 50%;
-            max-width: #{ $max-width + 'rem'};
-
-            @media (max-width: $small-devices) {
-                width: 100%;
-            }
         }
 
     }
