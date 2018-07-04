@@ -5,11 +5,11 @@
 // [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
 $headings: (
     h1: (2.5, 2, 4, 1),
-    h2: (1.6875, 1.5, 2.5, .5),
-    h3: (1.375, 1, 2, .5),
-    h4: (1.2, 1, 1.5, .5),
-    h5: (1, 1, 2.5, .5),
-    h6: (1, 1, 2.5, .5)
+    h2: (1.6875, 1.5, 2.5, .75),
+    h3: (1.375, 1, 2, .75),
+    h4: (1.2, 1, 1.5, .75),
+    h5: (1, 1, 2.5, .75),
+    h6: (1, 1, 2.5, .75)
 ) !default;
 
 // Set headings sizes, line-heights and margins
@@ -27,10 +27,6 @@ $headings: (
 @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
-    @import '../mixins/font-size';
-    @import '../mixins/line-height';
-    @import '../mixins/margin';
 
     @each $heading, $properties in $headings {
         #{$heading} {
@@ -51,8 +47,6 @@ h1 + h2 {
         $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
 
-        @import '../mixins/margin';
-
         @include margin-top(1);
     }
 
@@ -67,8 +61,6 @@ h3 + h4,
         $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
 
-        @import '../mixins/margin';
-
         @include margin-top(.5);
     }
 
@@ -81,8 +73,6 @@ h5 + h6 {
         $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
 
-        @import '../mixins/margin';
-
         @include margin-top(-.5);
     }
 
@@ -94,14 +84,14 @@ h6 {
 }
 
 // Change headings font if a heading font is set
-@if $font-headings != null {
+@if $heading-font-family != null {
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: $font-headings;
+        font-family: $heading-font-family;
     }
 }
 
