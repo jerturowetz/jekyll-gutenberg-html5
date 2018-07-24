@@ -1,20 +1,4 @@
-.sections {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: stretch;
-    align-items: center;
-    align-content: stretch;
-    width: 100%;
-}
-
 .section {
-    width: 100%;
-    flex: 2 1 auto;
-
-    @media ( min-width: $small-devices ) {
-        display: flex;
-        align-items: center;
-    }
 
     &__content {
         @extend %content-padding;
@@ -44,19 +28,6 @@
         text-align: center;
     }
 
-    &--half {
-        width: 100%;
-        flex: 1 1 auto;
-        align-self: stretch;
-        display: flex;
-        align-items: center;
-
-        @media (min-width: $small-devices) {
-            width: 50%;
-        }
-
-    }
-
     &--bg-image {
         background-size: cover;
         background-repeat: no-repeat;
@@ -74,7 +45,6 @@
 
         .section__title {
             color: #fff;
-
         }
 
     }
@@ -83,6 +53,7 @@
         display: flex;
         align-items: center;
         height: 94vh;
+        width: 100%;
 
         .section__content {
             @extend %content-padding;
