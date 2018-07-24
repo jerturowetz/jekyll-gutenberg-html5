@@ -11,8 +11,8 @@
 
 // Base
 @import "base/normalize"; // from HTML5 boilerplate
-@import "base/main"; // from HTML5 boilerplate
-@import "base/extras"; // from HTML5 boilerplate
+@import "base/main";      // from HTML5 boilerplate
+@import "base/extras";    // from HTML5 boilerplate
 @import "base/variables";
 @import "base/layout";
 @import "base/extends";
@@ -32,6 +32,7 @@
 // Theme
 @import "theme/footer";
 @import "theme/logo";
+@import "theme/content";
 @import "theme/topbar";
 @import "theme/menu";
 @import "theme/sections";
