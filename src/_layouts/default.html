@@ -21,8 +21,21 @@
         <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
 
         <div class="main-content">
-            {% assign sections = page.sections %}
-            {% include sections.html sections=sections %}
+
+            {% if page.content != '' %}
+			    <div class="content">
+                    {{ content}}
+                </div>
+            {% endif %}
+
+            {% for section in page.sections %}
+                {% if section.class %}
+                    {% include section-{{section.class}}.html section=section %}
+                {% else %}
+                    {% include section-default.html section=section %}
+                {% endif %}
+            {% endfor %}
+
         </div>
 
         <!-- <aside class="secondary-sidebar">Sidebar (right)</aside> -->
