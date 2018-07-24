@@ -56,7 +56,6 @@
         transition: color 0.5s;
         flex: 1 1 auto;
         background-color: #000;
-        // color: $dark-gray;
 
         @media ( min-width: $small-devices ) {
             display: none;
@@ -128,6 +127,11 @@
             &__link {
                 @include padding(0.5,1,0.55);
                 text-decoration: none;
+                color: $light-gray;
+
+                &:hover {
+                    color: $gray;
+                }
 
                 @media ( max-width: $small-devices ) {
                     @include padding(0.5,1);

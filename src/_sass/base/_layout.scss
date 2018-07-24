@@ -10,10 +10,10 @@ body {
     grid-template-columns: 20% 1fr 20%;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "header      header  header"
-        // "sidebar-pri content sidebar-alt"
-        "content     content content"
-        "footer      footer  footer";
+        "header      header   header"
+        "content     content  content"
+        "sections    sections sections"
+        "footer      footer   footer";
 }
 
 .main-header {
@@ -21,18 +21,10 @@ body {
     width: 100%;
 }
 
-.main-footer {
-    grid-area: footer;
-}
-
-// .primary-sidebar {
-//     grid-area: sidebar-pri;
-// }
-
 .main-content {
     grid-area: content;
 }
 
-// .secondary-sidebar {
-//     grid-area: sidebar-alt;
-// }
+.main-footer {
+    grid-area: footer;
+}

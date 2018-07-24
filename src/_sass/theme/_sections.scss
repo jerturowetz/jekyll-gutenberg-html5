@@ -19,19 +19,6 @@
     &__content {
         @extend %content-padding;
         @extend %content-max-width;
-
-        p:first-of-type {
-            @extend %lead;
-        }
-
-        :first-child {
-            margin-top: 0;
-        }
-
-        :last-child {
-            margin-bottom: 0;
-        }
-
     }
 
     &__title {
@@ -95,7 +82,7 @@
     &--hero {
         display: flex;
         align-items: center;
-        min-height: 94vh;
+        height: 94vh;
 
         .section__content {
             @extend %content-padding;
