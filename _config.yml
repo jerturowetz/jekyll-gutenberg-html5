@@ -20,7 +20,7 @@ theme-color: '#222222'
 
 # Build settings
 permalink: pretty
-destination: public
+destination: dist
 source: src
 markdown: kramdown
 plugins:
