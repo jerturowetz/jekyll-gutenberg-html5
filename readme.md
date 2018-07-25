@@ -1,10 +1,17 @@
-# jekyll-gutenberg-html5 template
+---
+layout: default
+image: og-image.jpg
+title: Jekyll-Gutenberg-HTML5
+description: A hackable Jekyll template based on the HTML5 boilerplate with beautiful typography
+---
 
-This project is a frankenstein of the [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate), adapted for [jekyll](https://jekyllrb.com/) by JerTurowetz.
+# jekyll-gutemberg-html5
 
-The HTML5 boilerplate server config, build, test and deploy tools have been removed.
+This project is a frankenstein of the [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate) and Matej Latin's [Gutenberg](https://github.com/matejlatin/Gutenberg) typography kit, adapted for [jekyll](https://jekyllrb.com/) by [JerTurowetz](https://jerturowetz.gihub.io).
 
-A heavily modified, shaved down version of Matej Latin's [Gutenberg](https://github.com/matejlatin/Gutenberg) typography kit has been added and should be easy enough to implement or dump if you dont want to use it.
+You can find the project repo [here](https://github.com/jerturowetz/jekyll-gutenberg-html5).
+
+The HTML5 boilerplate server config, build, test and deploy tools have been removed and the implemented version of Gutenberg has been zealously shaved down, making it easy to jump right in to, replaced by the original Gutenberg or dumped in lieu of your own preferred styles.
 
 ## Features
 
@@ -42,6 +49,6 @@ The rest is just basic layout stuff that you can hack up however you want. I usu
 
 ## To do
 
-- Exclude CSS & JS from jekyll and manage with gulp or webpack instead
+- Exclude CSS & JS from jekyll and manage with webpack instead
 - compress & resize images with whatever used above
 - Add basic htaccess/nginx header rules for simple setups
