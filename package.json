@@ -1,0 +1,10 @@
+{
+  "name": "jekyll-gutenberg-html5",
+  "version": "1.0.0",
+  "description": "A hackable Jekyll template based on the HTML5 boilerplate with beautiful typography",
+  "main": "index.js",
+  "repository": "git@github.com:jerturowetz/jekyll-gutenberg-html5",
+  "author": "Jeremy Turowetz <j.turowetz@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
