@@ -49,6 +49,6 @@ The rest is just basic layout stuff that you can hack up however you want. I usu
 
 ## To do
 
-- Exclude CSS & JS from jekyll and manage with gulp or webpack instead
+- Exclude CSS & JS from jekyll and manage with webpack instead
 - compress & resize images with whatever used above
 - Add basic htaccess/nginx header rules for simple setups
