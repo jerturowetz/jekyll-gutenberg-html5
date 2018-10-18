@@ -1,5 +1,4 @@
 <nav class="topbar">
-
     <div class="topbar__wrap">
 
         <div class="topbar__logo">
@@ -12,12 +11,21 @@
             <div class="bar3"></div>
         </div>
 
-        <ul class="menu dropdown-menu">
-            {% include menu-items.html %}
-        </ul>
+        <div class="topbar__main-menu">
+            <ul class="menu dropdown-menu">
+                {% include menu-items.html %}
+            </ul>
+        </div>
 
-        <div class="topbar__spacer">&nbsp;</div>
+        <div class="topbar__lang-switch">
+            <ul class="lang-switch">
+                {% for lang in site.languages %}
+                    <li class="menu__item">
+                        <a {% if lang == site.active_lang %}style="font-weight: bold;"{% endif %} href="{% if lang == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ lang }}{{page.url}} {% endif %}">{{ lang }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
 
     </div>
-
 </nav>

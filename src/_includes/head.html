@@ -1,41 +1,64 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+{% capture head-title %}
+    {% if page.title == "Home" %}
+        {{ site.title }} &middot; {{ site.tagline[site.active_lang] }}
+    {% else %}
+        {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+    {% endif %}
+{% endcapture %}
 
-    {% capture page-title %}{% if page.title %}{{page.title}} | {% endif %}{{site.title}}{% endcapture %}
-	{% capture social-image %}{% if page.image %}{{ page.image }}{% else %}{{ site.social-image }}{% endif %}{% endcapture %}
+{% capture head-description %}
+    {% if page.description %}{{ page.description }}{% else %}{{ site.description[site.active_lang] }}{% endif %}
+{% endcapture %}
 
-    <title>{{ page-title }}</title>
-    <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% capture social-image-file %}
+    {% if page.social-image %}{{ page.social-image }}{% else %}{{ site.social-image }}{% endif %}
+{% endcapture %}
 
-    <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | absolute_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | absolute_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | absolute_url }}">
-    <link rel="manifest" href="{{ 'site.webmanifest' | absolute_url }}">
-    <link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | absolute_url }}" color="{{ site.icon-color }}">
-    <meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">
-    <meta name="theme-color" content="{{ site.theme-color }}">
+{% capture social-image %}
+    {{ social-image-file | prepend: 'assets/images/' | absolute_url }}
+{% endcapture %}
 
-    <!-- CSS & fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,400i" rel="stylesheet">
-    <link rel="stylesheet" href="{{ 'css/style.css' | absolute_url }}"/>
+<link href="https://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <!-- Facebook -->
-    <meta property="og:image" content="{{ social-image | prepend: 'img/' | absolute_url }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="628">
-    <meta property="og:title" content="{{ page-title }}">
-    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:type" content="website">
+{% I18n_Headers %}
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ page-title }}">
-    <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
-    <meta name="twitter:image" content="{{ social-image | prepend: 'img/' | absolute_url }}">
-    <meta name="twitter:url" content="{{ page.url | absolute_url }}">
-</head>
+<!-- Title & Desc -->
+<title>{{ head-title }}</title>
+<meta name="description" content="{{ head-description }}">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="{{ 'favicon.ico' | prepend: 'assets/' | absolute_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | prepend: 'assets/images/' | absolute_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | prepend: 'assets/images/' | absolute_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | prepend: 'assets/images/' | absolute_url }}">
+<link rel="manifest" href="{{ 'site.webmanifest' | prepend: 'assets/' | absolute_url }}">
+<link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | prepend: 'assets/images/' | absolute_url }}" color="{{ site.icon-color }}">
+<meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">
+<meta name="theme-color" content="{{ site.theme-color }}">
+
+<!-- CSS & fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,400i" rel="stylesheet">
+<link rel="stylesheet" href="{{ 'style.css' | prepend: 'assets/css/' | absolute_url }}"/>
+
+<!-- Facebook -->
+<meta property="og:image" content="{{ social-image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:title" content="{{ head-title }}">
+<meta property="og:description" content="{{ head-description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ head-title }}">
+<meta name="twitter:description" content="{{ head-description }}">
+<meta name="twitter:image" content="{{ social-image }}">
+<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">

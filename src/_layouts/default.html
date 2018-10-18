@@ -3,51 +3,49 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="{{ page.lang }}">
+    <html class="no-js" lang="{{ site.active_lang }}">
 <!--<![endif]-->
 
+<head>
     {% include head.html %}
+</head>
 
-    <body>
+<body>
 
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-        <header class="main-header">
-            {% include topbar.html %}
-        </header>
+    <header class="main-header">
 
-        <!-- <aside class="primary-sidebar">Sidebar (left)</aside> -->
+        {% include topbar.html %}
 
-        <div class="main-content">
+    </header>
+
+    <div class="main-content">
+        <div class="sections">
 
             {% if page.content != '' %}
-                <div class="section">
-                    <div class="section__content">
-                        {{ content}}
+            <div class="section--default">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        {{ content | markdownify }}
                     </div>
                 </div>
+            </div>
             {% endif %}
 
-            {% for section in page.sections %}
-                {% if section.class %}
-                    {% include section-{{section.class}}.html section=section %}
-                {% else %}
-                    {% include section-default.html section=section %}
-                {% endif %}
-            {% endfor %}
+            {% assign sections = page.sections %}
+            {% include sections.html sections=sections %}
 
         </div>
+    </div>
 
-        <!-- <aside class="secondary-sidebar">Sidebar (right)</aside> -->
+    <footer class="main-footer">
+        {% include footer.html %}
+    </footer>
 
-        <footer class="main-footer">
-            {% include footer.html %}
-        </footer>
+    {% include scripts.html %}
 
-        {% include scripts.html %}
-
-    </body>
-
+</body>
 </html>

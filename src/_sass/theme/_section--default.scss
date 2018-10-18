@@ -1,0 +1,81 @@
+// .section--default
+// .section--dark
+// .section--half
+// .section--half-dark
+
+.section--default {
+    width: 100%;
+    flex: 2 1 auto;
+    background-color: #fff;
+
+    @media ( min-width: $small-devices ) {
+        display: flex;
+        align-items: center;
+    }
+
+    .section-wrapper {
+        @extend %content-padding;
+        @extend %content-max-width;
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .section-title {
+        text-transform: uppercase;
+
+        @media (min-width: $small-devices) {
+            @include font-size(2);
+            @include line-height(1.5);
+            @include margin-top(2.5);
+            @include margin-bottom(.75);
+        }
+
+    }
+
+    .section-content {
+
+        @media (max-width: $small-devices) {
+            width: 100%;
+        }
+
+        p:first-of-type {
+            @extend %lead;
+        }
+
+    }
+
+}
+
+.section--dark {
+    @extend .section--default;
+    background-color: #000;
+
+    .section-title,
+    .section-content {
+        color: #fff;
+    }
+
+}
+
+.section--half {
+    @extend .section--default;
+    flex: 1 1 auto;
+    align-self: stretch;
+
+    @media (min-width: $small-devices) {
+        width: 50%;
+    }
+
+}
+
+.section--half-dark {
+    @extend .section--half;
+    @extend .section--dark;
+}

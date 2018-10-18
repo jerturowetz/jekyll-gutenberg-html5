@@ -12,3 +12,9 @@
     }
 
 }
+
+.show-small {
+    @media (min-width: $small-devices) {
+        display:none!important;
+    }
+}

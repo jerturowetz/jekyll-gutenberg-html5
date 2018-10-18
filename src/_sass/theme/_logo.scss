@@ -1,3 +1,13 @@
 .logo {
-    fill: currentColor;
+
+    fill: $light-gray;
+
+    &__link {
+        display: inline-block;
+    }
+
+    &__image {
+        display: block;
+    }
+
 }

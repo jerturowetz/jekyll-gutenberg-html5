@@ -1,7 +1,26 @@
-{% for page in site.pages %}
-{% if page.layout == 'default' and page.title != 'BKDSN' %}
-    <li class="menu__item">
-        <a class="menu__item__link" href="{{ page.url | absolute_url }}">{{ page.title }}</a>
-    </li>
-{% endif %}
+{% for lang in site.languages %}
+{% unless lang == site.active_lang %}
+
+{%- capture lang-name -%}
+    {% if site.default_lang == site.active_lang %}
+        Fran&ccedil;ais
+    {% else %}
+        English
+    {% endif %}
+{%- endcapture -%}
+
+<li class="menu__item show-small">
+    <a class="menu__item__link" href="{% if lang == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ lang }}{{page.url}} {% endif %}">{{ lang-name }}</a>
+</li>
+{% endunless %}
+{% endfor %}
+
+{% for node in site.pages %}
+    {% if node.title != 'Home' %}
+        <li class="menu__item">
+            <a class="menu__item__link {% if page.url == node.url %}menu__item__link--active{% endif %}" href="{{ node.url | absolute_url }}">
+                {{ node.title }}
+            </a>
+        </li>
+    {% endif %}
 {% endfor %}

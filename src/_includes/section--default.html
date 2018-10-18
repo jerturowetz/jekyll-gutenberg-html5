@@ -1,0 +1,15 @@
+<div class="section--default">
+    <div class="section-wrapper">
+
+        {% if section.title %}
+            <h2 class="section-title">{{ section.title }}</h2>
+        {% endif %}
+
+        {% if section.content %}
+            <div class="section-content">
+                {{ section.content | markdownify }}
+            </div>
+        {% endif %}
+
+    </div>
+</div>

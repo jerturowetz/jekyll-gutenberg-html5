@@ -41,12 +41,11 @@
 
     }
 
-    &__spacer {
-        flex: 1 1 auto;
-        width: 15%;
+    &__main-menu {
+        flex: 3 1 auto;
 
         @media ( max-width: $small-devices ) {
-            display: none;
+            width: 100%;
         }
 
     }
@@ -56,6 +55,8 @@
         transition: color 0.5s;
         flex: 1 1 auto;
         background-color: #000;
+        color: $dark-gray;
+        margin-left: auto;
 
         @media ( min-width: $small-devices ) {
             display: none;
@@ -92,8 +93,39 @@
 
     }
 
+    &__lang-switch {
+        flex: 1 1 auto;
+        width: 15%;
+        @include padding(0,2,0,0);
+
+        @media ( max-width: $small-devices ) {
+            display: none;
+        }
+
+        .lang-switch {
+            margin: 0;
+
+            .menu__item {
+                float: right;
+                display: block;
+
+                a {
+                    text-decoration: none;
+                    @include padding(0.25,0.25);
+                    border-right: 1px solid $gray;
+                }
+
+                &:first-of-type a {
+                    padding-right: 0;
+                    border-right: none;
+                }
+            }
+
+        }
+
+    }
+
     .menu {
-        flex: 3 1 auto;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -101,41 +133,52 @@
 
         @media ( max-width: $small-devices ) {
             text-align: left;
-            flex: 4 1 auto;
-            width: 100%;
             background-color: $dark-gray;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
             max-height: 0;
 
             &.dropdown-open {
-                max-height: 40vh;
+                max-height: 100vh;
             }
 
         }
 
-        &__item {
+        .menu__item {
+            @include font-size(0.8);
+            @include line-height(0.8);
             cursor: pointer;
             display: inline-block;
             text-transform: uppercase;
 
             @media ( max-width: $small-devices ) {
                 width: 100%;
+                -webkit-transition: background-color 0.25s, color 0.15s;
+                transition: background-color 0.25s, color 0.15s;
                 margin: 0;
             }
 
-            &__link {
+            .menu__item__link {
                 @include padding(0.5,1,0.55);
                 text-decoration: none;
                 color: $light-gray;
 
-                &:hover {
-                    color: $gray;
-                }
-
                 @media ( max-width: $small-devices ) {
                     @include padding(0.5,1);
                     display: block;
+                }
+
+                &:hover {
+                    color: lighten( $brand, 40%);
+
+                    @media ( max-width: $small-devices ) {
+                        background-color: $dark-gray;
+                    }
+
+                }
+
+                &--active {
+                    color: #fff;
                 }
 
             }
