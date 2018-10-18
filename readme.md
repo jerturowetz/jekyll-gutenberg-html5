@@ -17,6 +17,7 @@ The HTML5 boilerplate server config, build, test and deploy tools have been remo
 
 - `/vscode/settings.json` ready to go
 - `.editorconfig` defaults for winners
+- super sweet `Makefile` for Netlify deploys (including branch deploys)
 
 ## Requirements
 
