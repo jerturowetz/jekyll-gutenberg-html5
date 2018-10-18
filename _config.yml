@@ -1,14 +1,14 @@
-# Welcome to Jekyll!
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Jekyll Gutenberg HTML5
+tagline:
+  en: 'EN tagline'
+  fr: 'FR tagline'
 description:
-version: 0.0.01
-logo: site-logo.svg # place in _includes/svg/
+  en: 'EN desc'
+  fr: 'FR desc'
 social-image: og-image.jpg # place in src/img/
+
+version: 0.0.01
 # url: "https://www.mysite.com"
 # analytics-code: UA-XXXXX-Y
 # maps-api: ########
@@ -18,13 +18,15 @@ icon-color: '#e08524'
 msapplication-TileColor: '#222222'
 theme-color: '#222222'
 
-# Build settings
-permalink: pretty
-destination: dist
+# Build
 source: src
+destination: dist
+permalink: pretty
 markdown: kramdown
-plugins:
-  - jekyll-feed
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -33,24 +35,15 @@ webrick:
   headers:
     Access-Control-Allow-Origin: "*"
 
-# Exclude from processing.
-#
-# Don't forget that Jekyll automatically
-# excludes files with a dot prefix
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - gulpfile.js
-  - package.json
-  - readme.md
-  - jekyll-ignored/
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+include: [ "_redirects" ]
+exclude: [ "jekyll-ignored/"]
 
-include:
-  - _redirects # for netlify
+plugins:
+  - jekyll-feed
+  - jekyll-polyglot
 
-# keep_files: []
+# Polyglot
+languages: ["en", "fr"]
+default_lang: "en"
+exclude_from_localization: ["assets", '_redirects', '404.html', 'browserconfig.xml', 'robots.txt']
+parallel_localization: false
