@@ -21,6 +21,9 @@ site_url := $(subst www,${BRANCH},${url_from_yaml})
 deploy_url := ${DEPLOY_PRIME_URL}
 endif
 
+deploy_url := $(subst ",,${deploy_url})
+site_url := $(subst ",,${site_url})
+
 # Robots.txt content
 ifeq ($(CONTEXT),production)
 define ROBOTS
@@ -45,11 +48,15 @@ endif
 export ROBOTS
 
 # Redirects content
+ifeq ($(deploy_url),$(site_url))
+REDIRECTS ?= /  /fr/  302  Language=fr
+else
 define REDIRECTS
 # Redirect default Netlify subdomain to primary domain
-$(subst ",,${deploy_url})/* $(subst ",,${site_url})/:splat 301!
+${deploy_url}/* ${site_url}/:splat 301!
 /  /fr/  302  Language=fr
 endef
+endif
 
 # Export redirects as an enviroment var so we can use it later
 export REDIRECTS
