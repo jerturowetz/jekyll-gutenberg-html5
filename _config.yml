@@ -9,7 +9,7 @@ description:
 social-image: og-image.jpg # place in src/img/
 
 version: 0.0.01
-# url: "https://www.mysite.com"
+url: "https://www.mysite.com"
 # analytics-code: UA-XXXXX-Y
 # maps-api: ########
 
