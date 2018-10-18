@@ -63,5 +63,6 @@ build:
 	@sed 's~${url_from_yaml}~${site_url}~g' ${default_config} >${generated_config}
 	@ echo "$$ROBOTS" > ${robots_file}
 	@ echo "$$REDIRECTS" > ${redirects_file}
+	@ echo "$$REDIRECTS" > src/test.txt
 	@jekyll build --config ${generated_config}
 	@rm ${generated_config}
