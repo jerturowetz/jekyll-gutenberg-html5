@@ -28,19 +28,18 @@ site_url := $(subst ",,${site_url})
 ifeq ($(CONTEXT),production)
 define ROBOTS
 # www.robotstxt.org/
-#
+# Sitemap
+Sitemap: ${site_url}/sitemap.xml
 # Allow crawling of all content
-User-agent: *
-Disallow:
+user-agent: *
+disallow:
 endef
 else
 define ROBOTS
 # www.robotstxt.org/
-#
-# Disallow and Noindex all content
-User-agent: *
-Disallow: /
-Noindex: /
+# Disallow crawling of all content
+user-agent: *
+disallow: /
 endef
 endif
 
@@ -66,9 +65,10 @@ all: build
 .PHONY: clean build
 
 build:
+	@bundle install
 	@rm -rf dist
 	@sed 's~${url_from_yaml}~${site_url}~g' ${default_config} >${generated_config}
 	@ echo "$$ROBOTS" > ${robots_file}
 	@ echo "$$REDIRECTS" > ${redirects_file}
-	@jekyll build --config ${generated_config}
+	@bundle exec jekyll build --config ${generated_config}
 	@rm ${generated_config}
