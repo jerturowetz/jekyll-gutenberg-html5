@@ -1,5 +1,6 @@
 # www.robotstxt.org/
-#
+# Sitemap
+Sitemap: https://jekyll-gutenberg-html5.netlify.com/sitemap.xml
 # Allow crawling of all content
-User-agent: *
-Disallow:
+user-agent: *
+disallow:
