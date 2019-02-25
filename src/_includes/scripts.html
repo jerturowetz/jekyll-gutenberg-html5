@@ -1,6 +1,6 @@
 <script src="{{ 'modernizr-3.6.0.min.js' | prepend: 'assets/js/vendor/' | absolute_url }}"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="{{ 'jquery-3.3.1.min.js' | prepend: 'assets/js/vendor/' | absolute_url }}"><\/script>')</script>
+<script src="{{ 'jquery-3.3.1.min.js' | prepend: 'assets/js/vendor/' | absolute_url }}"></script>
+<script src="{{ 'objectFitPolyfill.min.js' | prepend: 'assets/js/vendor/' | absolute_url }}"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="{{ 'mobile-chrome-vh-fix.js' | prepend: 'assets/js/vendor/' | absolute_url }}"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
@@ -8,11 +8,15 @@
 <script src="{{ 'main.js' | prepend: 'assets/js/' | absolute_url }}"></script>
 
 {% if site.analytics-code %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics-code}}"></script>
 <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', '{{site.analytics-code}}', 'auto'); ga('send', 'pageview')
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.analytics-code}}');
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 {% endif %}
 
 {% if site.maps-api %}
