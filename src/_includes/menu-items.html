@@ -10,13 +10,13 @@
 {%- endcapture -%}
 
 <li class="menu__item show-small">
-    <a class="menu__item__link" href="{% if lang == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ lang }}{{page.url}} {% endif %}">{{ lang-name }}</a>
+    <a class="menu__item__link" href=" {% if lang == site.default_lang %}{{ page.url | absolute_url }} {% else %}{{ page.url | prepend: lang | absolute_url }}{% endif %}">{{ lang-name }}</a>
 </li>
 {% endunless %}
 {% endfor %}
 
 {% for node in site.pages %}
-    {% if node.title != 'Home' %}
+	{% if node.layout == 'default' %}
         <li class="menu__item">
             <a class="menu__item__link {% if page.url == node.url %}menu__item__link--active{% endif %}" href="{{ node.url | absolute_url }}">
                 {{ node.title }}
