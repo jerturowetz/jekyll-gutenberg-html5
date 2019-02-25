@@ -2,7 +2,7 @@
 layout: default
 image: og-image.jpg
 title: Jekyll-Gutenberg-HTML5
-description: A hackable Jekyll template based on the HTML5 boilerplate with beautiful typography
+excerpt: A hackable Jekyll template based on the HTML5 boilerplate with beautiful typography
 ---
 
 # jekyll-gutemberg-html5

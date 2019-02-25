@@ -1,5 +1,16 @@
-<div class="hero" style="background-image: url('{{ page.social-image | prepend: 'assets/images/' | absolute_url }}');">
-    <div class="hero-content-wrapper">
-        <h1 class="hero-title">{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}</h1>
+<div class="hero">
+
+{% if page.image %}
+{% responsive_image_block %}
+  path: {{ page.image }}
+  alt: {{ page.title }}
+  class: "hero__image"
+  sizes: "100vw"
+{% endresponsive_image_block %}
+{% endif %}
+
+    <div class="hero__content-wrapper">
+        <h1 class="hero-title">{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ page.title }}{% endif %}</h1>
     </div>
+
 </div>

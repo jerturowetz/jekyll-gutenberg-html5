@@ -6,7 +6,7 @@ tagline:
 description:
   en: 'EN desc'
   fr: 'FR desc'
-social-image: og-image.jpg # place in src/img/
+image: og-image.jpg # place in src/img/
 
 version: 0.0.01
 url: "https://jekyll-gutenberg-html5.netlify.com"

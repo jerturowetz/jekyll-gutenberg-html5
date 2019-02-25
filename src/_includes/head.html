@@ -6,27 +6,41 @@
     {% endif %}
 {% endcapture %}
 
-{% capture head-description %}
-    {% if page.description %}{{ page.description }}{% else %}{{ site.description[site.active_lang] }}{% endif %}
-{% endcapture %}
-
-{% capture social-image-file %}
-    {% if page.social-image %}{{ page.social-image }}{% else %}{{ site.social-image }}{% endif %}
-{% endcapture %}
+{%- capture head-description -%}
+    {% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description[site.active_lang] }}{% endif %}
+{%- endcapture -%}
 
 {% capture social-image %}
-    {{ social-image-file | prepend: 'assets/images/' | absolute_url }}
+    {% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}
+{% endcapture %}
+
+{% capture social-url %}
+    {% if site.default_lang == site.active_lang %}
+        {{ page.url | absolute_url }}
+    {% else %}
+        {{ page.url | prepend: lang | absolute_url }}
+    {% endif %}
 {% endcapture %}
 
 <link href="https://gmpg.org/xfn/11" rel="profile">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="{{ site.active_lang }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="canonical" href="{{ page.permalink | absolute_url }}" />
 
-{% I18n_Headers %}
+<!-- I18n_Headers -->
+<link rel="alternate" hreflang="x-default" href=" {{ page.permalink | absolute_url }}" />
+<link rel="alternate" hreflang="{{site.default_lang}}-CA" href=" {{ page.permalink | absolute_url }}" />
+{% for lang in site.languages %}
+{% if lang == site.default_lang %}
+  {% continue %}
+{% endif %}
+<link rel="alternate" hreflang="{{lang}}-CA" href=" {{ page.permalink | prepend: lang | absolute_url }}" />
+{% endfor %}
 
 <!-- Title & Desc -->
-<title>{{ head-title }}</title>
+<title>{{ head-title | strip }}</title>
 <meta name="description" content="{{ head-description }}">
 
 <!-- Icons -->
@@ -44,21 +58,21 @@
 <link rel="stylesheet" href="{{ 'style.css' | prepend: 'assets/css/' | absolute_url }}"/>
 
 <!-- Facebook -->
-<meta property="og:image" content="{{ social-image }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="628">
-<meta property="og:title" content="{{ head-title }}">
+<meta property="og:image" content="{{ social-image | strip | absolute_url }}">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:title" content="{{ head-title | strip }}">
 <meta property="og:description" content="{{ head-description }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ social-url | strip | absolute_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:type" content="website">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ head-title }}">
+<meta name="twitter:title" content="{{ head-title | strip }}">
 <meta name="twitter:description" content="{{ head-description }}">
-<meta name="twitter:image" content="{{ social-image }}">
-<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:image" content="{{ social-image | strip | absolute_url }}">
+<meta name="twitter:url" content="{{ social-url | strip | absolute_url }}">
 
 <!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ 'feed.xml' | absolute_url }}">

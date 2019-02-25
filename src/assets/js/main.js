@@ -27,14 +27,17 @@ function scrollToTarget(e) {
     var new_position = $( dest ).offset();
     $('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
     closeDropDownMenu();
-    e.preventDefault();
 }
 
 
-var vhFixOptions = [
-    {
-        selector: '.section--hero',
-        vh: 94,
-    }
-];
-var vhFix = new VHChromeFix( vhFixOptions );
+// var vhFixOptions = [
+//     {
+//         selector: '.hero',
+//         minVh: 50,
+//     },
+//     {
+//         selector: '.single-case-study',
+//         minVh: 50,
+//     }
+// ];
+// var vhFix = new VHChromeFix( vhFixOptions );
