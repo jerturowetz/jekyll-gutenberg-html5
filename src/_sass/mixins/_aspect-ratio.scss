@@ -1,0 +1,20 @@
+@mixin aspect-ratio( $width, $height ) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: ( $height / $width ) * 100%;
+        max-height: 100vh;
+    }
+
+    > .hero__content-wrapper {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

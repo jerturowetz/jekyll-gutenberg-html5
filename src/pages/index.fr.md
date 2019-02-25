@@ -1,11 +1,13 @@
 ---
 layout: default
+lang: fr
 image: og-image.jpg
-title: Jekyll-Gutenberg-HTML5
+title: Jekyll-Gutenberg-HTML5 FR FR
 excerpt: A hackable Jekyll template based on the HTML5 boilerplate with beautiful typography
+permalink: /
 ---
 
-# jekyll-gutemberg-html5
+# jekyll-gutemberg-html5 FR
 
 This project is a frankenstein of the [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate) and Matej Latin's [Gutenberg](https://github.com/matejlatin/Gutenberg) typography kit, adapted for [jekyll](https://jekyllrb.com/) by [JerTurowetz](https://jerturowetz.gihub.io).
 
