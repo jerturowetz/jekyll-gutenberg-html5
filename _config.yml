@@ -1,11 +1,11 @@
 # Site settings
 title: Jekyll Gutenberg HTML5
 tagline:
-  en: 'EN tagline'
   fr: 'FR tagline'
+  en: 'EN tagline'
 description:
-  en: 'EN desc'
   fr: 'FR desc'
+  en: 'EN desc'
 image: og-image.jpg # place in src/img/
 
 version: 0.0.01
@@ -30,15 +30,15 @@ excerpt_separator: "\n\n"
 incremental: false
 source_maps: true
 
-sass:
-  style: compressed # possible values: nested expanded compact compressed
+# sass:
+#   style: compressed # possible values: nested expanded compact compressed
 
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
 
 include: [ "_redirects" ]
-exclude: [ "jekyll-ignored/" ]
+exclude: [ "jekyll-ignored/", "_sass/" ]
 keep_files: [ "assets/images" ]
 
 plugins:
@@ -51,8 +51,8 @@ plugins:
 
 
 # Polyglot
-languages: ["en", "fr"]
-default_lang: "en"
+languages: ["fr", "en"]
+default_lang: "fr"
 exclude_from_localization: ['assets', '_redirects', '404.html', 'browserconfig.xml', 'robots.txt', 'sitemap.xml']
 parallel_localization: false
 
