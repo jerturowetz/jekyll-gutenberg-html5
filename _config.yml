@@ -1,11 +1,11 @@
 # Site settings
 title: Jekyll Gutenberg HTML5
 tagline:
-  en: 'EN tagline'
   fr: 'FR tagline'
+  en: 'EN tagline'
 description:
-  en: 'EN desc'
   fr: 'FR desc'
+  en: 'EN desc'
 image: og-image.jpg # place in src/img/
 
 version: 0.0.01
@@ -51,8 +51,8 @@ plugins:
 
 
 # Polyglot
-languages: ["en", "fr"]
-default_lang: "en"
+languages: ["fr", "en"]
+default_lang: "fr"
 exclude_from_localization: ['assets', '_redirects', '404.html', 'browserconfig.xml', 'robots.txt', 'sitemap.xml']
 parallel_localization: false
 
