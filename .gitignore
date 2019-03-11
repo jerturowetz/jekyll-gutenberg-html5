@@ -4,4 +4,3 @@ node_modules/
 .jekyll-cache/
 .jekyll-metadata
 src/_redirects
-src/assets/css/
