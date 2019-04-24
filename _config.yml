@@ -11,9 +11,8 @@ image: og-image.jpg # place in src/img/
 version: 0.0.01
 url: "https://jekyll-gutenberg-html5.netlify.com"
 baseurl: ''
-# maps-api: AIzaSyBotldrEEryJCQB9_s1q-dhCXL-_K14Rfo
-# analytics-code: UA-XXXXX-Y
 # maps-api: ########
+# analytics-code: UA-XXXXX-Y
 
 # Favicon settings - use realfavicon generator
 icon-color: '#e08524'
