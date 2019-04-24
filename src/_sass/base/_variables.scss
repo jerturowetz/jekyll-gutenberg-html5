@@ -1,15 +1,20 @@
 // Guttenberg stuff
 
 // Colors
-$dark-gray: #222;
+$dark-gray: #0f0f0f;
 $gray: #41403E;
-$light-gray: #888;
-$brand: #ff5d5d;
+$light-gray: #d9d9d9;
+$brand: #00b259;
+$purple: #a050d9;
+$brand-alt: $purple;
+
+$lighter-gray: rgba($light-gray,0.3);
+$lighter-brand: rgba($brand,0.3);
+$lighter-brand-alt: rgba($brand-alt,0.3);
 
 // Theme / Fonts
 $body-font-family: 'Open Sans', 'Helvetica', sans-serif;
 $base-font-weight: 400;
-$base-font-weight-light: 300;
 
 $heading-font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
 $heading-font-weight: 700;
@@ -30,8 +35,8 @@ $line-height-desktop: 1.7 !default;
 $line-height-small: 1.2;
 $max-width: 35 !default; // Number only, no units. Gets converted to REMs and pixels.
 
-$small-devices: 900px;
-$large-devices: 1400px;
+$small-devices: 800px;
+$large-devices: 1200px;
 
 // Modular Scale
 $modular-scale: (
@@ -62,14 +67,15 @@ $color-font-body: $dark-gray !default;
 $color-font-headings: $color-font-body !default;
 $color-font-light: $light-gray !default;
 $color-font-figcaption: $color-font-body !default;
+$color-font-quote: $brand !default;
 
-$color-link-normal: $color-font-body;
-$color-link-hover: $color-font-body;
-$color-link-active: $brand;
-$color-link-visited: $color-font-light;
+$color-link-normal: $brand;
+$color-link-hover: $lighter-brand;
+$color-link-active: $lighter-brand;
+$color-link-visited: $brand;
 
-$color-selection: $color-font-light;
-$color-selection-background: $color-font-body;
+$color-selection: #fff;
+$color-selection-background: $brand-alt;
 
 $hr-color: $color-font-body;
 $hr-margin: 2;

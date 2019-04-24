@@ -25,6 +25,9 @@
     <div class="main-content">
         <div class="sections">
 
+            {% assign sections = page.sections %}
+            {% include sections.html sections=sections %}
+
             {% if page.content != '' %}
             <div class="section--default">
                 <div class="section-wrapper">
@@ -34,9 +37,6 @@
                 </div>
             </div>
             {% endif %}
-
-            {% assign sections = page.sections %}
-            {% include sections.html sections=sections %}
 
         </div>
     </div>

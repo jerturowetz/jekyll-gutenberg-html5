@@ -7,12 +7,11 @@
 body {
     height: 100vh!important; // needs important to override forced 100% on body placed by scroll-reveal js
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "header  header  header"
-        "content content content"
-        "footer  footer  footer";
+        "header"
+        "content"
+        "footer";
 }
 
 .main-header {

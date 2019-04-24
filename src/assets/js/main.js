@@ -29,15 +29,3 @@ function scrollToTarget(e) {
     closeDropDownMenu();
 }
 
-
-// var vhFixOptions = [
-//     {
-//         selector: '.hero',
-//         minVh: 50,
-//     },
-//     {
-//         selector: '.single-case-study',
-//         minVh: 50,
-//     }
-// ];
-// var vhFix = new VHChromeFix( vhFixOptions );

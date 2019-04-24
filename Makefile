@@ -3,9 +3,11 @@
 # Variables
 default_config := _config.yml
 generated_config := _config.deploy.yml
-url_from_yaml := $(strip $(subst url:,,$(shell grep --max-count=1 '^url:' _config.yml)))
 robots_file := src/robots.txt
 redirects_file := src/_redirects
+
+# get site url from yaml
+url_from_yaml := $(strip $(subst url:,,$(shell grep --max-count=1 '^url:' _config.yml)))
 
 # Environment variable fallbacks
 BRANCH ?= master
